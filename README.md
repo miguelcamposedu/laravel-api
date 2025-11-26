@@ -122,49 +122,67 @@ Schema::create('producto', function (Blueprint $table) {
 ```
 Significa:
 
-```bash foreignId('categoria_id'):``` crea una columna categoria_id tipo BIGINT sin signo.
-```bash constrained('categorias', 'id'):``` asume que la tabla relacionada es categorias y la columna es id.
-```bash cascadeOnDelete():``` si el usuario se borra, también se borran las secuencias asociadas.
-```bash $table->decimal('precio', 10, 2);``` 10 = dígitos totales, 2 = decimales. 
+```foreignId('categoria_id'):``` crea una columna categoria_id tipo BIGINT sin signo.
+
+```constrained('categorias', 'id'):``` asume que la tabla relacionada es categorias y la columna es id.
+
+```cascadeOnDelete():``` si el usuario se borra, también se borran las secuencias asociadas.
+
+```$table->decimal('precio', 10, 2);``` 10 = dígitos totales, 2 = decimales. 
 
 ## TIPOS NUMÉRICOS EN MIGRACIONES
 
 ### Decimales / precisión fija
-decimal(precision, scale) → perfecto para dinero.
+```decimal(precision, scale)``` → perfecto para dinero.
 
 ### Números en coma flotante
-float(total, decimals)
-double(total, decimals) → igual que float pero más precisión.
+```float(total, decimals)```
+
+```double(total, decimals)``` → igual que float pero más precisión.
 
 ### Booleanos
 boolean() → se almacena como TINYINT(1).
 
 ### Otros menos usados
-unsignedBigInteger(), mediumInteger(), unsignedTinyInteger(), etc.
+```unsignedBigInteger()```, ```mediumInteger()```, ```unsignedTinyInteger()```, etc.
 
 Si trabajas con cantidades económicas → decimal.
+
 Si necesitas enteros → cualquier integer.
+
 Si necesitas aproximación → float o double.
 
 ## TIPOS FECHAS Y TIEMPO EN MIGRACIONES
-date() → solo fecha (YYYY-MM-DD)
-datetime() → fecha y hora
-timestamp() → marca de tiempo (usado para created_at, updated_at)
-time() → solo hora
-year() → solo año
+
+```date()``` → solo fecha (YYYY-MM-DD)
+
+```datetime()``` → fecha y hora
+
+```timestamp()``` → marca de tiempo (usado para created_at, updated_at)
+
+```time()``` → solo hora
+
+```year()``` → solo año
+
 dateTimeTz() / timestampTz() → versiones con zona horaria
 
 ### Otros útiles:
-softDeletes() → crea deleted_at tipo timestamp
-timestamps() → crea created_at y updated_at
+
+```softDeletes()``` → crea deleted_at tipo timestamp
+
+```timestamps()``` → crea created_at y updated_at
 
 ## TIPOS TEXTOS EN MIGRACIONES
 
-string() → VARCHAR (hasta 255 chars)
-text() → TEXT (hasta ~64 KB)
-mediumText() → MEDIUMTEXT (hasta ~16 MB)
-longText() → LONGTEXT (hasta ~4 GB)
-char() → CHAR de longitud fija
+```string()``` → VARCHAR (hasta 255 chars)
+
+```text()``` → TEXT (hasta ~64 KB)
+
+```mediumText()``` → MEDIUMTEXT (hasta ~16 MB)
+
+```longText()``` → LONGTEXT (hasta ~4 GB)
+
+```char()``` → CHAR de longitud fija
 
 Ejemplos:
 ```php
