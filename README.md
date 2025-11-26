@@ -63,7 +63,7 @@ Este proyecto está basado en **Laravel**, un framework de PHP moderno y expresi
 
 ---
 
-## Conexión con la base de datos
+## 💾 Conexión con la base de datos
 
 Debemos editar el fichero .env de nuestro proyecto, modificando la siguiente configuración como corresponda:
 
