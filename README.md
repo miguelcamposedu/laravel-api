@@ -63,6 +63,25 @@ Este proyecto está basado en **Laravel**, un framework de PHP moderno y expresi
 
 ---
 
+## Conexión con la base de datos
+
+Debemos editar el fichero .env de nuestro proyecto, modificando la siguiente configuración como corresponda:
+
+```php
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=sacristan_db // nombre de la base de datos
+DB_USERNAME=sacdbuser // usuario de conexión a la base de datos
+DB_PASSWORD=password // contraseña de conexión a la base de datos
+```
+
+Si necesitamos limpiar la información de la conexión de la caché, utilizar el siguiente comando en el terminal:
+
+```bash
+php artisan config:clear 
+```
+
 ## 🧱 Generación de código con Artisan
 
 ### Crear nuevos modelos
