@@ -153,7 +153,9 @@ Significa:
 
 En el ficheros routes/api.php se debe definir la ruta a cada controller:
 
+```php
 Route::resource('secuencias', SecuenciaController::class);
+```
 
 Y la forma de acceder a los diferentes métodos será la siguiente:
 
