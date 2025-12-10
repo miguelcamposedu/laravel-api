@@ -149,6 +149,30 @@ Significa:
 
 ```$table->decimal('precio', 10, 2);``` 10 = dígitos totales, 2 = decimales. 
 
+## DEFINICIÓN DE RUTAS PARA LOS ENDPOINTS
+
+En el ficheros routes/api.php se debe definir la ruta a cada controller:
+
+Route::resource('secuencias', SecuenciaController::class);
+
+Y la forma de acceder a los diferentes métodos será la siguiente:
+
+```php
+GET /secuencias → index
+POST /secuencias → store
+GET /secuencias/{secuencia} → show
+PUT /secuencias/{secuencia} → update
+DELETE /secuencias/{secuencia} → destroy
+```
+
+Si queremos solo algunas rutas:
+
+```php
+Route::resource('secuencias', SecuenciaController::class)->only([
+    'index', 'store', 'show', 'update', 'destroy'
+]);
+```
+
 ## TIPOS NUMÉRICOS EN MIGRACIONES
 
 ### Decimales / precisión fija
