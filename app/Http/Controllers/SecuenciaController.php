@@ -13,7 +13,6 @@ class SecuenciaController extends Controller
     public function index()
     {
         //return Secuencia::all();
-
         return Secuencia::where('user_id', auth()->id())->get();
     }
 
@@ -38,7 +37,10 @@ class SecuenciaController extends Controller
      */
     public function show(Secuencia $secuencia)
     {
-        //
+        return response([
+            'secuencia' => $secuencia,
+            'user' => auth()->user()
+        ], 200);
     }
 
     /**
@@ -47,6 +49,7 @@ class SecuenciaController extends Controller
     public function edit(Secuencia $secuencia)
     {
         //
+        return $secuencia;
     }
 
     /**
@@ -63,5 +66,6 @@ class SecuenciaController extends Controller
     public function destroy(Secuencia $secuencia)
     {
         //
+        return Secuencia::destroy($secuencia->id);
     }
 }

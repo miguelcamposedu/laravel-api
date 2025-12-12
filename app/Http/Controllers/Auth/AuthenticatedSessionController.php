@@ -20,14 +20,14 @@ class AuthenticatedSessionController extends Controller
             'password' => ['required'],
         ]);
 
-        if (! Auth::attempt($credentials)) {
+        if (!Auth::attempt($credentials)) {
             return response(['message' => 'Invalid credentials'], 422);
         }
 
         $token = $request->user()->createToken('api')->plainTextToken;
         return response([
             'token' => $token,
-            'user'  => $request->user(),
+            'user' => $request->user(),
         ], 200);
     }
 

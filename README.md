@@ -154,7 +154,7 @@ Significa:
 En el ficheros routes/api.php se debe definir la ruta a cada controller:
 
 ```php
-Route::resource('secuencias', SecuenciaController::class);
+Route::apiResource('secuencias', SecuenciaController::class);
 ```
 
 Y la forma de acceder a los diferentes métodos será la siguiente:
@@ -170,7 +170,7 @@ DELETE /secuencias/{secuencia} → destroy
 Si queremos solo algunas rutas:
 
 ```php
-Route::resource('secuencias', SecuenciaController::class)->only([
+Route::apiResource('secuencias', SecuenciaController::class)->only([
     'index', 'store', 'show', 'update', 'destroy'
 ]);
 ```
