@@ -15,13 +15,13 @@
 
 # 🚀 Proyecto Laravel API
 
-Este proyecto está basado en **Laravel**, un framework de PHP moderno y expresivo que facilita el desarrollo de APIs y aplicaciones web robustas.
+Este proyecto está basado en **Laravel 13**, un framework de PHP moderno y expresivo que facilita el desarrollo de APIs y aplicaciones web robustas.
 
 ---
 
 ## 🧰 Requisitos previos
 
--   PHP 8.2 o superior
+-   PHP 8.3 o superior
 -   Composer
 -   MySQL o MariaDB
 -   XAMPP / Valet / Laravel Sail (opcional)
