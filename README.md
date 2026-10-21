@@ -22,7 +22,7 @@ Este proyecto está basado en **Laravel 13**, un framework de PHP moderno y expr
 ## 🧰 Requisitos previos
 
 -   PHP 8.3 o superior
--   Composer
+-   Composer (Install: https://getcomposer.org/)
 -   MySQL o MariaDB
 -   XAMPP / Valet / Laravel Sail (opcional)
 
