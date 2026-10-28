@@ -1,0 +1,10 @@
+created:
+    - database/factories/CategoryFactory.php
+    - database/factories/PostFactory.php
+    - database/migrations/2026_10_28_111658_create_categories_table.php
+    - database/migrations/2026_10_28_111659_create_posts_table.php
+    - app/Models/Category.php
+    - app/Models/Post.php
+models:
+    Category: { name: 'string nullable', user_id: 'id:user' }
+    Post: { title: 'string nullable', description: 'text nullable', user_id: 'id:user', category_id: 'id:category' }

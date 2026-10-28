@@ -1,0 +1,9 @@
+models:
+  Category:
+    name: string nullable
+    user_id: id:user
+  Post:
+    title: string nullable
+    description: text nullable
+    user_id: id:user
+    category_id: id:category
