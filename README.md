@@ -71,7 +71,7 @@ Debemos editar el fichero .env de nuestro proyecto, modificando la siguiente con
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=sacristan_db // nombre de la base de datos
+DB_DATABASE=dam_db // nombre de la base de datos
 DB_USERNAME=sacdbuser // usuario de conexión a la base de datos
 DB_PASSWORD=password // contraseña de conexión a la base de datos
 ```

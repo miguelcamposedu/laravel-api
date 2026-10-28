@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost/sacristanweb'),
+    'url' => env('APP_URL', 'http://localhost/dam'),
 
     /*
     |--------------------------------------------------------------------------
