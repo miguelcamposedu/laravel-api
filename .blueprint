@@ -1,8 +1,8 @@
 created:
     - database/factories/CategoryFactory.php
     - database/factories/PostFactory.php
-    - database/migrations/2026_10_28_111658_create_categories_table.php
-    - database/migrations/2026_10_28_111659_create_posts_table.php
+    - database/migrations/2026_10_28_122859_create_categories_table.php
+    - database/migrations/2026_10_28_122900_create_posts_table.php
     - app/Models/Category.php
     - app/Models/Post.php
 models:
